@@ -1,6 +1,6 @@
 # local_innealla — Innealla SIS bridge for Moodle
 
-Connect Moodle to [Innealla SIS](https://innealla.com). This is the **core** plugin of the Innealla SIS suite.
+**Requires Moodle 4.5–5.2+** (see `version.php`). Connect Moodle to [Innealla SIS](https://innealla.com). This is the **core** plugin of the Innealla SIS suite.
 
 ## Install
 
@@ -9,15 +9,19 @@ Connect Moodle to [Innealla SIS](https://innealla.com). This is the **core** plu
 3. Configure: Site administration → Plugins → Local plugins → Innealla SIS bridge.
 4. In Innealla Integration Hub, enable the Moodle add-on with matching `apiKey` and `baseUrl`.
 
-## Suite (companions)
+## Configuration
 
-Companions are separate Moodle plugins (same pattern as ZiLink / Mahara sets). Each declares a dependency on `local_innealla`.
+Under **Site administration → Plugins → Local plugins → Innealla SIS bridge**:
 
-## Support
+- SIS API base URL (ending in `/api`)
+- Institution id
+- Shared API key (matches Hub `apiKey`)
+- Enable scheduled sync
 
-- Email: support@inneall.com
-- Issues: use this repository’s issue tracker
+Companions are dispatched by Hub feature flags from `GET /moodle-sync/manifest`.
+
+CLI: `php admin/cli/` path equivalent — `php local/innealla/cli/sync.php` (or under `public/` on Moodle 5).
 
 ## License
 
-GNU GPL v3 or later.
+GNU GPL v3 or later. See `LICENSE` in this package.
