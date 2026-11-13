@@ -25,8 +25,8 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_innealla';
-$plugin->version   = 2026111300;
+$plugin->version   = 2026111301;
 $plugin->requires  = 2024100700;
-$plugin->release   = '0.2.2';
+$plugin->release   = '0.2.3';
 $plugin->maturity  = MATURITY_BETA;
 $plugin->supported = [405, 502];
